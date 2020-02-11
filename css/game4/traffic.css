@@ -1,0 +1,265 @@
+html{
+  font-size: 100px;
+}
+.trafficLight_Box{
+  width: 100%;
+  height: 100vh;
+  background: #dec6c0 url(../../img/game4/homebj.png) no-repeat;
+  background-size: 100%;
+  background-position: bottom center;
+  position: fixed;
+  z-index: 3  ;
+  /* position: relative; */
+}
+
+.begin_order{
+  width: 4.27rem;
+  height: 1.08rem;
+  background: url(../../img/game4/btn.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 1.69rem;
+  left: 0;
+  right: 0;
+}
+/* 红绿灯 */
+.trafficBox{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: url(../../img/game4/sjbj1.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.img1{
+  /* width: 0.8rem;
+    height: 2.74rem;
+    background: url(../../img/game4/hd2.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    margin-left: 3.61rem;
+    top: 6.82rem; */
+    width: 0.8rem;
+    height: 2.74rem;
+    background: url(../../img/game4/hd2.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    margin-left: 3.61rem;
+    bottom: 3.82rem;
+}
+.img2{
+/* width: 0.95rem;
+height: 4.38rem;
+background: url(../../img/game4/hd3.png) no-repeat ;
+background-size: 100% 100%;
+margin-top: 5.18rem;
+margin-left: 3.75rem; */
+width: 0.95rem;
+    height: 4.38rem;
+    background: url(../../img/game4/hd3.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 3.6rem;
+    /* margin-top: 5.18rem; */
+    margin-left: 3.75rem;
+}
+
+.img3{
+  /* width:1.15rem;
+  height:3.92rem;
+  background: url(../../img/game4/hd2.png) no-repeat;
+  background-size: 100% 100%;
+  margin-top: 5.41rem;
+  margin-left: 1.61rem; */
+  width: 1.15rem;
+  height: 3.92rem;
+  background: url(../../img/game4/hd2.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 4rem;
+  margin-left: 1.61rem;
+}
+.img4{
+    width: 1.28rem;
+    height: 4.01rem;
+    background: url(../../img/game4/hd1.png) no-repeat;
+    background-size: 100% 100%;
+    /* margin-top: 7.18rem; */
+    position: absolute;
+    bottom: 2.8rem;
+    margin-left: 3.1rem;
+}
+
+#btn{
+  width: 100px;
+  height: 40px;
+  background-color: skyblue;
+  margin: 0 auto;
+  margin-top: .5rem;
+  border-radius: 15px;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+}
+ .circle1{
+  border-radius: 50%;
+  width: .4rem;
+  height: .4rem;
+  margin: 0 auto;
+  background-color: #cccccc;
+  margin-top: .15rem;
+}
+.circle2{
+  border-radius: 50%;
+  width: .5rem;
+  height: .5rem;
+  margin: 0 auto;
+  background-color: #cccccc;
+  margin-top: .15rem;
+}
+.circle3{
+  border-radius: 50%;
+  width: .6rem;
+  height: .6rem;
+  margin: 0 auto;
+  background-color: #cccccc;
+  margin-top: .15rem;
+}
+#circle_red{
+  margin-top: .1rem;
+}
+/* #circle_red{
+  border-radius: 50%;
+  width: .35rem;
+  height: .35rem;
+  background-color: #cccccc;
+}
+
+#circle_yello{
+  border-radius: 50%;
+  width: .35rem;
+  height: .35rem;
+  background-color: #cccccc;
+}
+
+#circle_green{
+  border-radius: 50%;
+  width: .35rem;
+  height: .35rem;
+  background-color: #cccccc;
+} */
+
+#button{
+  width: 1.5rem;
+  height: .5rem;
+  line-height: .5rem;
+  margin: 0 auto;
+  background-color: pink;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.trafficBox_title{
+  width: 5rem;
+  height: 4rem;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0  ;
+  font-size: .3rem;
+  background-color: #4e4d4d57;
+  border-radius: 15px;
+  margin-top: 40px;
+  /* opacity: 0.5; */
+}
+#topic{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: .7rem ;
+}
+.result{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: #0202027e;
+  z-index: 100;
+  display: none;
+}
+.result_text{
+    width: 4rem;
+    height: 3rem;
+    margin: 0 auto;
+    background: rgb(253, 252, 252);
+  font-size: 18px;
+  margin-top: 3rem;
+  border-radius: 15px;
+
+}
+.defeated{
+  line-height: 3rem;
+  text-align: center;
+}
+
+.options{
+  width: 80%;
+  margin: 0 auto;
+}
+.options input{
+  margin-bottom: .3rem;
+}
+.acquisition{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+/*最后页 */
+#guess{
+  width: 100%;
+  height: 100vh;
+  background: url(../../img/game4/sjbj1.png) no-repeat;
+  background-size: 100% 100%;
+}
+.guessText{
+  width:5.53rem;
+height:4.42rem;
+margin: 0 auto;
+background: url(../../img/game4/bj.png) no-repeat;
+background-size: 100% 100%;
+position: absolute;
+top: 4.25rem;
+left: 0;
+right: 0;
+/* display: none; */
+}
+.result_spare{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 16px;
+  padding-top:1rem;
+  line-height: .5rem;
+}
+
+
+.nextStep{
+  width: 100px;
+  height: 30px;
+  background-color: #FFC264;
+  border-radius: 15px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #000000;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 4rem;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+.nextStep a{
+  color: #000000;
+}
+

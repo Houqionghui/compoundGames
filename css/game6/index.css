@@ -1,0 +1,194 @@
+html{
+  font-size: 100px;
+}
+.timePreferences{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background:#b5b4ad  url('../../img/game6/bj.png') no-repeat;
+  background-size: 100%;
+  background-position: top center;
+  z-index: 1;
+}
+
+.timePreferences_title{
+width:5.92rem;
+min-height:4.67rem;
+position: relative;
+top: 0.98rem;
+margin-top: 0.98rem;
+background:rgba(239,194,170,1);
+margin: 0 auto;
+border-radius: 15px;
+}
+
+.timePreferences_title .earn{
+  padding-top: 0.33rem;
+   font-size:0.29rem;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(21,35,44,1);
+  text-align: center;
+}
+.timePreferences_text{
+  width: 90%;
+  margin: 0 auto;
+}
+.rule{
+  width:4.6rem;
+  font-size:0.26rem;
+  font-weight:normal;
+  color:rgba(21,35,44,1);
+  margin: 0 auto;
+  margin-top: 0.33rem;
+  margin-bottom: 0.35rem;
+}
+
+.conversion{
+  width: 95%;
+  margin: 0 auto;
+  font-size: 0.26rem;
+}
+
+.conversion  span{
+  margin-left: 0.37rem;
+}
+.conversion .today{
+  margin-left: .26rem;
+}
+.conversion  input{
+  width:1.05rem;
+  height:0.37rem;
+  background:rgba(211,165,141,1);
+  border-radius:5px;
+  border: 0;
+  margin-left: .1rem;
+  margin-right: .1rem;
+  text-align: center;
+}
+
+.hebdomad{
+  margin-top: 0.31rem;
+}
+.btn{
+  width: 62%;
+  margin: 0 auto;
+  margin-top: 0.33rem;
+  font-size: 0.33rem;
+  padding-bottom: .33rem;
+}
+.btn .border{
+width:0.66rem;
+height:0.04rem;
+display: inline-block;
+background:rgba(211,165,141,1);
+vertical-align: middle;
+}
+.button{
+width:1.68rem;
+height:0.49rem;
+display: inline-block;
+background:rgba(211,165,141,1);
+opacity:0.99;
+line-height:0.49rem ;
+text-align: center;
+border-radius:5px;
+color: #F6F2E2;
+margin-left: .1rem;
+margin-right: .1rem;
+}
+
+
+/* 第二页 */
+.award{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background:#f2ebc5  url('../../img/game6/bj2.png') no-repeat;
+  background-size: 100%;
+  background-position: bottom center;
+
+}
+
+.awardText{
+width:5.92rem;
+min-height:4.67rem;
+position: absolute;
+bottom: 3.2rem;
+left: 0;
+right: 0;
+/* background:rgba(239,194,170,1); */
+margin: 0 auto;
+border-radius: 15px;
+}
+
+.award_title{
+  padding-top: 0.33rem;
+   font-size:0.29rem;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(21,35,44,1);
+  text-align: center;
+}
+.award_rule{
+  width:4.6rem;
+  font-size:0.26rem;
+  font-weight:normal;
+  color:rgba(21,35,44,1);
+  margin: 0 auto;
+  margin-top: 0.33rem;
+  margin-bottom: 0.35rem;
+}
+.award_convert input{
+  width:1.05rem;
+  height:0.37rem;
+  background:rgba(211,165,141,1);
+  border-radius:5px;
+  border: 0;
+  margin-left: .1rem;
+  margin-right: .1rem;
+  text-align: center;
+  margin-bottom: .3rem;
+}
+.award_convert{
+  width: 95%;
+  margin: 0 auto;
+  font-size: 0.26rem;
+}
+.give{
+  width: 90%;
+  margin: 0 auto;
+}
+.Western{
+
+}
+.ThreeWeeks{
+
+}
+
+.btn2{
+  width: 62%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.33rem;
+}
+.btn2 .border{
+width:0.66rem;
+height:0.04rem;
+display: inline-block;
+background:rgba(211,165,141,1);
+vertical-align: middle;
+}
+.button2{
+  width:1.68rem;
+  height:0.49rem;
+  display: inline-block;
+  background:rgba(211,165,141,1);
+  opacity:0.99;
+  line-height:0.49rem ;
+  text-align: center;
+  border-radius:5px;
+  color: #F6F2E2;
+  margin-left: .1rem;
+  margin-right: .1rem;
+  }

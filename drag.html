@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-app-web-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DRAG</title>
+    <script src="./js/game1/resize.js"></script>
+    <link rel="stylesheet" href="./css/game1/index4.css">
+    <link rel="stylesheet" href="./css/game1/reset.min.css">
+    <link rel="stylesheet" href="./css/game1/luckyDog.css">
+    <script src="./js/game1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="dragBox">
+        <div class="content">
+            <div class="left">
+                <!-- A餐厅 -->
+                <div class="box"></div>
+                <!-- B餐厅 -->
+                <div class="box1"></div>
+            </div>
+
+        </div>
+        <!-- 萝卜 -->
+        <div class="list">
+
+        </div>
+        <!-- 拖动完萝卜,弹出结果 -->
+    </div>
+    <div class="result">
+        <div class="result-text">
+        </div>
+        <div class="result_text1"></div>
+        <div class="drawBox">
+            <div class="noName" style="display: none;"></div>
+            <div class="c-lucky">
+                <!-- <img class="isYou" src="img/luckyDog/isYou.png" style="display: none;"> -->
+                <div class="luckyName">
+                    <div class="name1">
+                    </div>
+                    <div class="name2">
+                        点击开始
+                    </div>
+                    <div class="name3">
+                    </div>
+                </div>
+                <div class="actionBtn" id="action"></div>
+                <!-- <input class="actionBtn" type="button" id="action" /> -->
+                <div class="stopBtn" id="stop"></div>
+                <!-- <input class="stopBtn" type="button" value="停止" id="stop" /> -->
+            </div>
+            <audio id="palyerAction" autoplay="autoplay" loop="loop" src=""></audio>
+
+            <div id="btn" onclick="btn()">确定</div>
+        </div>
+    </div>
+    <script src="./js/game1/drag.js"></script>
+    <script src="./js/game1/script.js"></script>
+    <script>
+        document.body.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        });
+        let data = [
+            { "id": 1, "text": [10, 90] },
+            { "id": 2, "text": [20, 80] },
+            { "id": 3, "text": [30, 70] },
+            { "id": 4, "text": [40, 60] },
+            { "id": 5, "text": [50, 50] },
+            { "id": 6, "text": [60, 40] },
+            { "id": 7, "text": [70, 30] },
+            { "id": 8, "text": [80, 20] },
+            { "id": 9, "text": [90, 10] },
+        ]
+        function list() {
+            let list = document.getElementsByClassName('list')[0]
+            let str = '';
+            for (let i = 0; i < data.length; i++) {
+                str += `
+                <div class="drag" id="${data[i].id}"><span style="pointer-events: none;">普通${data[i].text[0]}%<br>团体${data[i].text[1]}%</span></div>
+                `;
+                list.innerHTML = str;
+            }
+        }
+        list();
+        let arrA = [];
+        let arrB = [];
+        let num = 9;
+        new Drag({
+            dragEle: '.drag', tarEle: '.box',
+            onStart: function (e) {
+                // e.innerHTML = "我被抓到了";
+            },
+            onMove: function (e) {
+                // e.innerHTML = "我在移动";
+            },
+            onMoveIn: function (e) {
+                e.style.cssText = "opacity: 1;"
+            },
+            onEnd: function (e) {
+                num--;
+                e.innerHTML = "我已移入A区域";
+                console.log('我已移入A区域');
+                // console.log(e.id);
+                arrA.push(e.id);
+                // console.log(arrA);
+                empty();
+                // e.style.cssText += "display: none;"
+                // e.style.display = 'none';
+                e.remove();
+            },
+        });
+
+        new Drag({
+            dragEle: '.drag', tarEle: '.box1',
+            onStart: function (e) {
+                // e.innerHTML = "我被抓到了";
+            },
+            onMove: function (e) {
+                // e.innerHTML = "我在移动";
+                // console.log('move');
+            },
+            onMoveIn: function (e) {
+                e.style.cssText = "opacity: 1;"
+            },
+            onEnd: function (e) {
+                num--;
+                arrB.push(e.id);
+                empty();
+                console.log('我已移入B区域');
+                e.innerHTML = "我已移入B区域";
+                e.remove();
+            },
+        });
+        let arrAdata = '';
+        let context = '';
+        let aggregateA = [];
+        let aggregateB = [];
+        let result = document.getElementsByClassName('result')[0];
+        function empty() {
+            if (num == 0) {
+                let number = Math.floor((Math.random() * 2) + 1);
+                console.log(number);
+                if (number == 1) {
+                    let n = Math.floor(Math.random() * arrA.length + 1) - 1;
+                    console.log(arrA[n]);
+                    arrAdata = arrA[n];
+                    context = 'A';
+                    aggregateA = [16, 20];
+                    text(arrAdata);
+                } else if (number == 2) {
+                    let n = Math.floor(Math.random() * arrB.length + 1) - 1;
+                    arrAdata = arrB[n];
+                    context = 'B';
+                    aggregateB = [1, 38.5]
+                    text(arrAdata)
+                }
+
+            }
+        }
+        let probability = []; //最终随机出来的概率
+        function text(arrAdata) {
+            if (arrAdata == 1) {
+                probability = [10, 90];
+            } else if (arrAdata == 2) {
+                probability = [20, 80];
+            }
+            else if (arrAdata == 3) {
+                probability = [30, 70];
+            }
+            else if (arrAdata == 4) {
+                probability = [40, 60];
+            } else if (arrAdata == 5) {
+                probability = [50, 50];
+            }
+            else if (arrAdata == 6) {
+                probability = [60, 40];
+            }
+            else if (arrAdata == 7) {
+                probability = [70, 30];
+            }
+            else if (arrAdata == 8) {
+                probability = [80, 20];
+            }
+            else if (arrAdata == 9) {
+                probability = [90, 10];
+            }
+            console.log(probability);
+            trundle(probability);
+        }
+
+        function trundle(probability) {
+            let resultText = document.getElementsByClassName('result-text')[0];
+            for (let i = 0; i < probability.length; i++) {
+                let str = '';
+                console.log(probability[0]);
+                str += `
+            <div class="probability">
+           <div class="probabilit_text">
+            <p>今天的实际情况是</p>
+            <span class="common">${probability[0]}%概率接到普通订单</span><br>
+            <span class="group">${probability[1]}%概率接到团体订单</span>
+            </div>
+            <div onclick="draw()" class="raffle">确定</div>              
+            </div>`;
+                resultText.innerHTML = str;
+            }
+            setTimeout(function () {
+                result.style.display = 'block';
+            }, 1000)
+        }
+        function draw() {
+            let resultText = document.getElementsByClassName('result-text')[0];
+            let drawBox = document.getElementsByClassName('drawBox')[0];
+            let btn = document.getElementById('btn');
+            resultText.style.display = 'none';
+            drawBox.style.display = 'block';
+        }
+        //随机出现团体订单或者普通订单后,显示的按钮
+        function btn() {
+            let resultText = document.getElementsByClassName('result-text')[0];
+            let drawBox = document.getElementsByClassName('drawBox')[0];
+            drawBox.style.display = 'none';
+            let diningHall = window.localStorage.getItem("name");
+            console.log(diningHall);
+
+            let total = '';
+            let indent = document.getElementsByClassName('result_text1')[0];
+            console.log(indent);
+            indent.style.display = 'block';
+            let str = '';
+            if (diningHall == '普通订单') {
+                console.log(context);
+                if (context == 'A') {
+                    total = aggregateA[0];
+                } else if (context = 'B') {
+                    total = aggregateB[0];
+                }
+            } else if (diningHall == '团体订单') {
+                if (context == 'A') {
+                    total = aggregateA[1];
+                } else if (context == 'B') {
+                    total = aggregateB[1];
+                }
+            }
+            str += `<div class="restaurant">
+            <div class="restaurantBox">
+            <div>您选择去${context}餐厅工作</div>
+            <div>接到的是<span>${diningHall}</span></div>
+            <div>获得了${total}分！</div>
+            </div> 
+            <div class="pageDown"><a href="index2.html">确定</a></div>
+            </div>
+           `;
+            indent.innerHTML = str;
+        }
+
+    </script>
+
+</body>
+
+</html>

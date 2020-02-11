@@ -1,0 +1,166 @@
+.drawBox{
+	display: none;
+	position: relative;
+}
+html{
+	font-size: 100px;
+}
+.c-lucky {
+	height: 5.15rem ;
+	width:6.51rem;
+	background: url(../../img/game1/luckyDog/组\ 11.png) no-repeat;;
+	background-size: 100% 100%;
+		margin:0 auto;
+	margin-top: 2.11rem;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	z-index: 99;
+}
+
+.luckyName {
+	width: 4rem;
+	height: 1.64rem;
+	/* margin: 198px 0px 0px 197px; */
+	/* background-color: aqua; */
+	position: relative;
+	left: 0;
+	right:0 ;
+	top: 1rem;
+	bottom: 0;
+	margin: 0 auto;
+	/* display: inline-block; */
+	font-size: 50px;
+	/* line-height: 50px; */
+	overflow: hidden;
+	text-align: center;
+}
+
+.actionBtn {
+	width: 1.74rem;
+	height: 0.76rem;
+	border: none;
+	background-image: url(../../img/game1/luckyDog/开始.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	z-index: 0;
+	top: 3.23rem;
+	left: .99rem;
+}
+
+.stopBtn {
+	width: 1.74rem;
+	height: 0.76rem;
+	background: url(../../img/game1/luckyDog/停止.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 3.23rem;
+	right: 1.36rem;
+	z-index: 1;
+	/* border-radius: 20px;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	-moz-outline-radius: 20px;
+	-moz-outline-radius: 20px;
+	font-size: 40px;
+	color: #000000; */
+}
+
+.c-lucky .name1,
+.c-lucky .name2,
+.c-lucky .name3 {
+	/* width: 308px; */
+	/* height: 164px; */
+	font-size: 20px;
+	line-height: 2rem;
+	position: absolute;
+	/* right: 200px; */
+	/* top: 20px; */
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 100;
+
+}
+
+.c-lucky .name1 {
+	bottom: 164px;
+}
+
+.c-lucky .name2 {}
+
+.c-lucky .name3 {
+
+	top: 164px;
+}
+
+.isYou {
+	width: 400px;
+	position: absolute;
+	top: -15px;
+	left: -165px;
+	z-index: 999;
+}
+#btn{
+	width: 2.19rem;
+	height: 0.78rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: .2rem;
+	border-radius: 5px;
+	color: #519CFF;
+	font-size: .45rem;
+	background-color: #F3F7FF;
+	text-align: center;
+	line-height: 0.78rem;
+	margin: 0 auto;
+	z-index: 100;
+	display: none;
+}
+
+.probabilit_text{
+	 text-align: center;
+}
+.probabilit_text p{
+	width: 3rem;
+	font-size:0.36rem;
+	font-family:Microsoft YaHei;
+	font-weight:bold;
+	color:rgba(82,155,255,1);
+	margin: 0 auto;
+	padding-top: 1.07rem;
+	border-bottom: 1px solid rgba(82,155,255,1);
+	padding-bottom: 0.28rem;
+}
+.probabilit_text .common,.group{
+	padding-top:0.34rem ;
+	font-size: 0.3rem;
+	color:rgba(82,155,255,1);
+	display: inline-block;
+	font-family:Microsoft YaHei;
+	font-weight:bold;
+	line-height:0.3rem;
+}
+.raffle{
+	width: 92px;
+	height: 32px;
+	background-color: rgba(82,155,255,1); /* Green */
+	border: none;
+	color: white;
+	text-align: center;
+	line-height: 32px;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-top: 20px;
+	cursor: pointer;
+	border-radius:15px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}

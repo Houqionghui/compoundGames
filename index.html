@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="./css/game1/index.css">
+  <link rel="stylesheet" href="./css/game1/reset.min.css">
+  <script>
+    ~function () {
+      computedFont();
+      window.addEventListener('resize', computedFont, false);
+      function computedFont() {
+        var deviceW = document.documentElement.clientWidth;
+        if (deviceW > 750) return;
+        document.documentElement.style.fontSize = deviceW / 750 * 100 + 'px';
+      }
+    }();
+  </script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+  <div class="homePage">
+    <div class="imgBox">
+        <img src="./img/game1/cy.png" alt="" class="imgleft">
+        <img src="./img/game1/cz.png" alt="" class="imgright">
+    </div>
+    <div class="house">
+      <img src="./img/game1/lefthouse.png" alt="" class="houseleft">
+      <img src="./img/game1/rhouse.png" alt="" class="houseright">
+    </div>
+    <div class="tree_1">
+      <i></i>
+     
+    </div>
+  </div>
+  <div class="homePage2">
+  </div>
+  <script src="./js/game1/jquery-1.10.2.js"></script>
+  <script> 
+  let homePage=document.getElementsByClassName('homePage')[0];
+  let homePage2=document.getElementsByClassName('homePage2')[0];
+  homePage.onclick=function(){
+  $(".banner .begin").css('box-shadow', 'none')
+  setTimeout(function () {
+    $('.homePage').fadeOut(500)
+    $('.homePage2').fadeIn(500)
+  }, 50)
+  }
+  homePage2.onclick=function(){
+    window.location.href='drag.html'
+  }
+  </script>
+  <script>
+      $(function(){
+    $('.imgleft').addClass('animated fadeInLeft');
+    setTimeout(function(){
+        $('.imgleft').removeClass('fadeInLeft');
+    }, 1000);
+
+    $('.imgright').addClass('animated fadeInRight');
+    setTimeout(function(){
+        $('.imgright').removeClass('fadeInRight');
+    }, 1000);
+});
+
+  </script>
+</body>
+</html>

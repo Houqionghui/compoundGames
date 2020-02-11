@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3</title>
+  <script>
+    ~function () {
+      computedFont();
+      window.addEventListener('resize', computedFont, false);
+      function computedFont() {
+        var deviceW = document.documentElement.clientWidth;
+        if (deviceW > 750) return;
+        document.documentElement.style.fontSize = deviceW / 750 * 100 + 'px';
+      }
+    }();
+  </script>
+  <link rel="stylesheet" href="./css/game3/index3.css">
+  <!-- 公共样式 -->
+  <link rel="stylesheet" href="./css/game3/reset.min.css">
+  <!-- 星星样式 -->
+  <link rel="stylesheet" href="./css/game3/style.css">
+  <link rel="stylesheet" href="./css/game3/animate.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+</head>
+
+<body>
+  <div class="path">
+    <!-- 星星 -->
+    <div class="mystar" id="mystar">
+      <div class="star comet"></div>
+    </div>
+    <div class="myrule">
+      <img src="./img/game3/广告牌.png" alt="" class="myrule_img">
+    </div>
+    <div class="btn">开始游戏</div>
+  </div>
+  <!-- 路线 -->
+  <div class="course">
+    <div class="lamp">
+      <i class="led led-rose"></i>
+    </div>
+    <div class="gameRule">
+      <p class="first">第一份外卖两条路都比较通畅。有AB两条路线可以选择(只能选一个)</p>
+      <p class="second">第二份外卖怎么走都会迟到。有CD两条路线可以选择(只能选一个)</p>
+    </div>
+    <div class="myclous">
+      <div class="myclous_text">
+
+        <p class="p1">你想选择哪条路线呢？</p>
+      </div>
+    </div>
+    <div class="map">
+      <div class="indent">
+        <div class="indent_one"><span>第二单</span></div>
+        <div class="indent_two">第一单</div>
+        <div class="dining">餐厅</div>
+      </div>
+
+      <div class="select">
+        <!-- 第一单 -->
+        <div class="select_A">
+          <div class="rule1">
+            <div class="rule1_text">得到48积分</div>
+          </div>
+          <div class="rule2">
+            <div class="rule2_text">25%得200积分，75%得0积分</div>
+          </div>
+          <button value="A" id="input1" style="writing-mode:tb-rl;">A路线 </button>
+          <button value="B" id="input2" style="writing-mode:tb-rl;">B路线</button>
+        </div>
+        <!-- 第二单 -->
+        <div class="select_B">
+          <div class="rule3">
+            <div class="rule3_text">会导致扣150积分。</div>
+          </div>
+          <div class="rule4">
+            <div class="rule4_text"> 75%扣200积分，25%不扣积分。</div>
+          </div>
+          <button value="C" id="input3" style="writing-mode:tb-rl;">C路线 </button>
+          <button value="D" id="input4" style="writing-mode:tb-rl;">D路线</button>
+        </div>
+      </div>
+    </div>
+    <div class="pathBtn" id="pathBtn"> 确定</div>
+  </div>
+
+  <!-- 结果页 -->
+  <div id="result">
+    <!-- 遮罩层 -->
+    <div class="result_context">
+
+    </div>
+    <div class="result_context_img"></div>
+    <div class="pageDown"><a href="index4.html">确定</a></div>
+  </div>
+  <script src="./js/game3/jquery.js"></script>
+  <script src="./js/game3/index3.js"></script>
+  <script src="./js/game3/index.js"></script>
+  <script>
+    $('.btn').click(function () {
+      setTimeout(function () {
+        $('.path').fadeOut(500)
+        $('.course').fadeIn(500)
+      }, 30)
+    })
+  </script>
+</body>
+
+</html>

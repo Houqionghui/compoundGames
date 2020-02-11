@@ -1,0 +1,390 @@
+html{
+  font-size: 100px;
+} 
+body{
+  position: relative;
+}
+.path{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 20;
+  background:#5370b4 url(../../img/game3/3bg.png) no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+.path .myrule img{
+  width: 6.2rem;
+  height:1.68rem ;
+  position: absolute;
+  top: 1.76rem;
+  left: 0.66rem;
+  z-index: 11;
+}
+
+.btn{
+  width: 100px;
+  height:40px;
+  background-color: #6e766e;
+  font-size: 10px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #ffffffff;
+  font-size: 16px;
+}
+/* 要摆动的灯 */
+/* .course .lamp{
+  width:1.75rem ;
+  height:3.25rem ;
+  position: absolute;
+  top:0 ;
+  left: 0.56rem;
+} */
+
+.course .lamp{
+  width: 0.03rem;
+  height:1.8rem ;
+  position: absolute;
+  left: 20%;
+  top: 0;
+  background-color: #A27F56;
+  transform-origin: 0 -1em;
+  animation: swing 3.5s ease-in-out forwards infinite;
+}
+
+.led:before{
+  content: '';
+  display: block;
+  width: 1.75rem;
+  height: 1.21rem;
+  background:url(../../img/game3/灯头.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 1.7rem;
+  left: -.87rem;
+  border-radius: 4em 4em 0 0;
+}
+
+/* 游戏规则 */
+.gameRule{
+  width: 250px;
+  height: 100px;
+  background-color: #e3f6ff;
+  position: absolute;
+  right: .2rem;
+  top: .5rem;
+  font-size: .28rem;
+  color: #221709;
+  border-radius: 5px;
+}
+.gameRule p{
+  padding-left: .1rem;
+}
+.gameRule .first{
+  padding-top: .1rem;
+  margin-bottom: .1rem;
+}
+
+/* 要动的云 */
+.myclous{
+  width:2.2rem;
+  height: 1.42rem;
+  background: url(../../img/game3/云.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 3rem;
+  left: 2.5rem;
+}
+.myclous_text{
+  padding-top: .3rem;
+  padding-left: .2rem;
+}
+.myclous_text p{
+ width: 3.9rem;
+ font-size: 0.12rem;
+}
+.myclous_text .p1{
+  width: 90%;
+  font-size: 0.28rem !important;
+  font-weight: 400;
+  /* text-align: center; */
+}
+/* 路线页 */
+.course{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #e8bc84 url(../../img/game3/bj2.png) no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+  z-index: 1;
+}
+.course .select{ 
+  width: 60%;
+  margin: 0 auto;
+  /* font-size: 15px; */
+}
+.course .select input{
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 0;
+  text-align: center;
+}
+/* 地图 */
+.map{
+  width: 5.82rem;
+  height:8.16rem;
+  background: url(../../img/game3/地图.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 4.4rem;
+  left:0.87rem ;
+}
+.indent .indent_one{
+  width: 1.17rem;
+  height: 0.38rem;
+  background-color: #E6716E;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 15px;
+  position: absolute;
+  left:.7rem ;
+  top:-.3rem;
+  text-align: center;
+}
+.indent .indent_two{
+  width: 1.17rem;
+  height: 0.38rem;
+  background-color: #E6716E;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 15px;
+  position: absolute;
+  top: 2.68rem;
+  left: 2rem;
+  text-align: center;
+}
+.indent .dining{
+  width: 1.17rem;
+  height: 0.38rem;
+  background-color: #E6716E;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 15px;
+  position: absolute;
+  left: 3.48rem;
+  top: 5.31rem;
+  text-align: center;   
+}
+
+/* 第一单 */
+
+.rule1{
+  width:1.57rem;
+  height:1.59rem;
+  position: absolute;
+  /* C路线 */
+  /* left:-0.4rem;
+  top: 1.83rem; */
+  top: 5.27rem;
+  right: -0.4rem;   
+  background: url(../../img/game3/kuang2.png) no-repeat;
+  background-size: 100% 100% ;
+}
+
+.rule1_text{
+  font-size: .23;
+  line-height:1rem;
+  text-align: center;
+}
+
+.rule2{
+  width: 1.83rem;
+  height: 1.02rem;
+  background: url(../../img/game3/kuang1.png) no-repeat;
+  position: absolute;
+  top: 4.87rem;
+  /* right: -0.4rem;    */
+  left: -.6rem;
+  background-size: 100% 100%;
+}
+
+.rule2_text{  
+  width: 103%;
+  /* margin: 0 auto; */
+  /* font-size: .2rem; */
+  padding-top: .12rem;
+  padding-left: 0.1rem;
+}
+
+.rule3{
+    /* width: 1.83rem;
+    height: 1.06rem; */
+     width:1.57rem;
+     height:1.59rem;
+    background: url(../../img/game3/kuang2.png) no-repeat;
+    position: absolute;
+    top: 1.83rem;
+    left: -.6rem;
+    background-size: 100% 100%;
+    text-align: center;
+  
+}
+.rule3_text{
+  width: 62px;
+  font-size: .13rem;
+  padding-top: 10px;
+    padding-left: 15px;
+}
+.rule4{
+  /* width:1.57rem;
+  height:1.59rem; */
+  width: 1.83rem;
+  height: 1.06rem;
+  background: url(../../img/game3/kuang1.png) no-repeat;
+  position: absolute;
+  top: 5.27rem;
+  right: -0.4rem;
+  top: 1.83rem;
+  background-size: 100% 100%;
+  text-align: center;
+}
+.rule4 .rule4_text{
+  font-size: .2rem;
+    padding-top: 7px;
+    padding-left: 6px;
+}
+ #input1{
+  width:  0.38rem;
+  height: 1.17rem;
+  background-color: #FFC264;
+  color: #000000;
+  border: 0;
+  font-size: .23rem;
+  border-radius: 15px;
+  position: absolute;
+  top: 6.1rem;
+  left: 4.8rem;
+ } 
+ #input2{
+  width:  0.3rem;
+  height: 1.17rem;
+  background-color: #FFC264;
+  color: #000000;
+  border: 0;
+  font-size: .24rem;
+  border-radius: 15px;
+  position: absolute;
+  top: 5.8rem;
+  left: -.2rem;
+ }
+ .select_B{
+
+ }
+
+ #input3{
+  width:  0.38rem;
+  height: 1.17rem;
+  background-color: #FFC264;
+  color: #000000;
+  border: 0;
+  font-size: 14px;
+  border-radius: 15px;
+  position: absolute;
+  top: 2.8rem;
+  left: -.2rem;
+ }
+ 
+ #input4{
+  width:  0.38rem;
+  height: 1.17rem;
+  background-color: #FFC264;
+  color: #000000;
+  border: 0;
+  font-size: 14px;
+  border-radius: 15px;
+  position: absolute;
+  top: 3.3rem;
+  left: 4.8rem;
+ }
+
+ /* 结果页 */
+ #result{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: url(../../img/game3/Bj.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+  display: none;
+ }
+ .pathBtn{
+   width: 100px;
+   height: 30px;
+   background-color: #FFC264;
+   border-radius:15px;
+   line-height: 30px;
+   font-size: 16px;
+   color: #000000;
+   margin: 0 auto;
+   position: absolute;
+   bottom: .2rem;
+   right: 0;
+   left: 0;
+   text-align: center;
+   /* display: none; */
+ }
+.result_context{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  background-color:#746e6e62;
+}
+.result_context_img{
+  width:5.53rem;
+  height:4.42rem;
+  background: url(../../img/game3/biantie.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 4.1rem;
+  left: 0.84rem;
+  z-index: 3;
+}
+.choice{
+  width:4rem;
+  padding-top: 1rem;
+  margin: 0 auto;
+  font-size: 0.34rem;
+}
+.choice_num{
+  padding-top: 0.39rem;
+}
+
+.pageDown{
+  width: 150px;
+  height: 30px;
+  background-color: #FFC264;
+  border-radius: 15px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #000000;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 4rem;
+  right: 0;
+  left: 0;
+  text-align: center;
+  z-index: 3;
+}
+.pageDown a{
+  color: #000000;
+}

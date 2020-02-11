@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust:none
+
+}
+html{
+  font-size: 100px;
+}
+
+body{
+ 
+}
+.dragBox{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background:  #9a7c5e url(../../img/game1/bj1.png) no-repeat;
+  background-position: top center;
+  background-size: 100%; 
+}
+.content {
+  min-height: calc(100vh - 300px);
+  /* padding: 40px 40px 0 40px; */
+}
+
+.list {
+
+  width: 90%;
+  /* height: 5rem; */
+  user-select: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.box {
+  width:3.55rem ;
+  height:3.52rem ;
+  background: url(../../img/game1/index3/金币袋子.png)no-repeat;
+  background-size: 100% 100%;
+  /* opacity: .5; */
+  display: inline-block;
+  position: relative;
+  top: 2.83rem;
+  left:-.4rem;
+}
+
+.drag {
+  display: inline-block;
+  cursor: pointer;
+  background: url("../../img/game1/index3/胡萝卜.png") no-repeat;
+  background-size: 100% 100%;
+  width: 0.65rem;
+  height: 2.1rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 30px;
+  margin-bottom: 0.37rem;
+
+}
+
+
+.box1 {
+  width: 4.3rem;
+  height:3.79rem ;
+  background: url(../../img/game1/index3/A房子.png)no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  position: relative;
+  top: -0.63rem;
+  right:-3.4rem;
+  /* opacity: .5; */
+}
+.drag span {
+  width:1.1rem;
+  height:0.62rem;
+  display: inline-block;
+  position: relative;
+  top: 100px;
+  left: -.3rem;
+  -webkit-transform : scale(0.84,0.84) ;
+  /* *font-size:0.16rem; */
+  background:rgba(255,245,223,1);
+  border-radius:5px;
+}
+.result{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  position: absolute;
+  background:#e7e5d4 url(../../img/game1/luckyDog/bj4.png)no-repeat;
+  background-position: top center;
+  background-size: 100% ;
+  display: none;
+}
+
+.result-text{
+  width:6.05rem;
+  height:4.56rem;
+  margin: 0 auto;
+  margin-top: 2.52rem;
+  background:url(../../img/game1/luckyDog/单子.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+  font-size: 16px;
+}
+
+.result_text1{
+  width:6.05rem;
+  height:4.56rem;
+  margin: 0 auto;
+  margin-top: 2.52rem;
+  background:url(../../img/game1/luckyDog/单子.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+  font-size: 16px;
+  display: none;
+} 
+.restaurant{
+  padding-top: 0.9rem;
+}
+.restaurantBox{
+  width: 60%;
+  margin: 0 auto;
+  
+  /* background-color: red; */
+}
+.restaurantBox div{
+  margin-bottom: .4rem;
+  font-size:0.3rem;
+  font-family:Microsoft YaHei;
+  font-weight:bold;
+  color:rgba(82,155,255,1);
+  line-height:0.3rem;
+}
+.pageDown{
+  width: 80px;
+  height: 30px;
+  background-color: #f08660;
+  margin: 0 auto;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+}
+.pageDown a{
+  color: #ffffff ;
+}

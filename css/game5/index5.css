@@ -1,0 +1,293 @@
+
+.homePage{
+  width: 100%;
+  height: 100%;
+  background: #ede0b9 url(../../img/game5/bj1.png) no-repeat;
+  background-position: bottom center;
+  background-size: 100%; 
+  position: fixed;
+  z-index: 3;
+}
+.homePage_btn{
+  width: 100px;
+  height: .8rem;
+  background: #EFB97E;
+  font-size: 18px;
+  border-radius: 15px;
+  line-height: .8rem;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+/* 内容展示页 */
+.order{
+  width: 100%;
+  height: 100vh;
+  background: #eeeacb url(../../img/game5/bj3.png) no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+.orderBox{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 4.6rem;
+  left: 0;
+  right: 0;
+} 
+.orderA{
+  width: 3.1rem;
+  height: 5.5rem;
+  background: url(../../img/game5/订单A.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  flex: 1;
+}
+.orderA_context{
+  width: 80%;
+  position: relative;
+  top: 1.42rem;
+  left: 0.28rem; 
+}
+.orderA ul{
+  width: 100%;  
+  border-bottom: 2px  solid #9d9c97;
+  padding-bottom: 0.12rem;
+  overflow: hidden;
+}
+.orderA ul li{
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: .0.13rem;
+}
+.orderA ul li div{
+  display: inline-block;
+  font-size:0.27rem;
+  font-family:Microsoft YaHei;
+  font-weight:bold;
+  color:rgba(103,97,93,1);
+}
+.orderB{
+  width: 3.1rem;
+  height: 5.5rem;
+  background:url(../../img/game5/订单B.png)no-repeat;
+  background-size: 100% 100%;
+  margin-left: 0.31rem;
+  flex: 1;
+}
+.dishMoney{
+  float: right;
+}
+.total{
+width: 80%;
+margin: 0 auto;
+overflow: hidden;
+padding-top: 0.1rem;
+}
+.total div{
+display: inline-block;
+font-size:0.27rem;
+font-family:Microsoft YaHei;
+font-weight:bold;
+color:rgba(103,97,93,1);
+}
+
+.predict{
+  font-size:0.29rem;
+  font-family:Microsoft YaHei;
+  font-weight:bold;
+  color:rgba(103,97,93,1);
+  line-height:0.3rem;
+  margin-top: 0.24rem;
+}
+
+.probability{
+  width:2.4rem;
+  height:0.89rem;
+  background:rgba(240,241,244,1);
+  border-radius:0rem;
+  margin-top: .3rem;
+}
+
+.probability div{
+padding-top: .1rem;
+width: 100%;
+margin: 0 auto;
+font-size:0.23rem;
+font-family:Microsoft YaHei;
+font-weight:bold;
+color:rgba(82,155,255,1);
+display: inline-block;
+text-align: center;
+}
+
+
+/* B订单 */
+.orderB_context{
+  width: 80%;
+  position: relative;
+  top: 1.42rem;
+  left: 0.2rem; 
+  flex: 1;
+}
+.orderB ul{
+width: 100%;  
+ border-bottom: 2px  solid #9d9c97;
+ padding-bottom: 0.12rem;
+ overflow: hidden;
+}
+.orderB ul li{
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: .0.13rem;
+}
+.orderB ul li div{
+display: inline-block;
+font-size:0.27rem;
+font-family:Microsoft YaHei;
+font-weight:bold;
+color:rgba(103,97,93,1);
+}
+
+
+/* 两个按钮 */
+.buttonBox{
+  width: 70%;
+  margin: 0 auto;
+  /* overflow: hidden; */
+  position: absolute;
+  top: 10.2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+/* .buttonBox img{
+  width: 1.67rem;
+  height: 1.3rem;
+  display: block;
+ text-align: center;
+} */
+
+.buttonBox button{
+  /* width: 1.67rem;
+  height: 1.3rem; */
+}
+.buttonBox .buttonA_img{
+  background: url("../../img/game5/按钮A.png") no-repeat  left top;
+  border-style: none;
+  background-size: 100% 100%; 
+}
+.buttonB .buttonB_img{
+  background: url("../../img/game5/按钮B.png") no-repeat  left top;
+  border-style: none;
+  background-color: transparent;
+  background-size: 100% 100%;
+}
+
+.buttonA {
+  /* display: inline-block; */
+flex: 1;
+}
+.buttonB{
+  display: inline-block;
+  float: right;
+}
+
+
+/* 结果页 */
+.initPage{
+  /* width: 100%;
+  height: 100vh;
+  background:#b0dafc url(../../img/game5/bj4.png) no-repeat;
+  background-position: bottom center;
+  background-size: 100%; 
+  position: fixed; */
+
+  width: 100%;
+  height: 100vh;
+  background: #eeeacc url(../../img/game5/bj4.png) no-repeat;
+  background-size: 100% auto;
+  /* background-position: top center; */
+  position: fixed;
+  }
+  .orderForm{
+    width: 4.61rem;
+    height: 3.24rem;
+    margin: 0 auto;
+    background: url(../../img/game5/订单.png) no-repeat;
+    background-size: 100%; 
+    position: absolute;
+    top: 5.55rem;
+    left: 0;
+    right: 0;
+  }
+  .orderForm .context{
+    width: 3.72rem;
+    margin: 0 auto;
+    margin-top: 0.67rem;
+    font-size: 0.27rem;
+    color: #529BFF;
+  }
+
+
+  /* 红包页 */
+.clouds .cloud_img1{
+  width:1.64rem;
+  height:0.71rem ;
+  position: absolute;
+  top: 1.82rem;
+  left:1rem; 
+  transform: scale(0.6);
+  animation: moveclouds 15s linear infinite;
+  }
+  
+  .clouds .cloud_img2{
+    width: 1.92rem;
+    height:0.64rem;
+    position: absolute;
+    top: 1.87rem;
+    right: 0.57rem;
+    left: 5.83rem;
+    z-index:1;
+    transform: scale(0.8);
+    animation: moveclouds 10s linear infinite;
+  }
+  
+  .clouds .cloud_img3{
+    width: 1.92rem;
+    height:0.64rem;
+    position: absolute;
+    top: 2.03rem;
+    right: 0.57rem;
+    left: 2.83rem;
+    z-index:1;
+    transform: scale(0.8);
+    animation: moveclouds 10s linear infinite;
+  }
+  .nextStep{
+    width: 100px;
+    height: .8rem;
+    background: #EFB97E;
+    font-size: 18px;
+    border-radius: 15px;
+    line-height: .8rem;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+  }
+  .nextStep a{
+    color: #000000;
+  }
+  @keyframes moveclouds {
+    0% {margin-left: 100px;}
+    100% {margin-left: -100px;}
+    }
+  

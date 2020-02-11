@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <!-- <link rel="stylesheet" href="./css/game4/traffic.css"> -->
+  <link rel="stylesheet" href="./css/game4/traffic.css">
+  <script src="./js/resize.js"></script>
+  <script src="./js/jquery.js"></script>
+</head>
+<body>
+  <!-- 首页 -->
+  <div class="trafficLight_Box">
+    <div class="begin_order"></div>
+  </div>
+<!-- 红绿灯 -->
+    <div class="trafficBox">
+      <div class="trafficBox_title">
+        <div id="topic">前方即将到达第<span id="red">1</span>个交通灯，请您猜测您会遇到红灯还是绿灯？</div>
+        <div class="options">
+          <input type="radio" name="DoorCt" value="1">A.红灯<br>
+          <input type="radio" name="DoorCt" value="2">B.绿灯
+        </div>
+        <!-- <div id="button">确定</div> -->
+      </div>
+      <!-- 闪烁的红绿灯 -->
+      <div  class="img1" id="trafficLight">
+        <div id="circle_red"   class="circle1"></div>
+        <div id="circle_yello" class="circle1"></div>
+        <div id="circle_green" class="circle1"></div>
+      </div>
+      <div class="result"> 
+        <div class="result_text"></div>
+        <div id="btn"> 确定</div>
+      </div>
+    </div>
+<!-- 结果页 -->
+    <div id="guess">
+      <div class="guessText"></div>
+      <div class="nextStep"><a href="./index5.html">确定</a></div>
+    </div>
+    <script src="./js/game4/traffic.js"></script>
+  <script>
+    let beginOrder=document.getElementsByClassName('begin_order')[0];
+    beginOrder.onclick=function(){
+      setTimeout(function(){
+        $('.trafficLight_Box').fadeOut(500)
+          $('.trafficBox').fadeIn(500)
+      },1000)
+    }
+  </script>
+</body>
+</html>
