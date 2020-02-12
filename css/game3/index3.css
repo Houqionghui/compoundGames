@@ -240,7 +240,7 @@ body{
 }
 .rule3_text{
   width: 62px;
-  font-size: .13rem;
+  /* font-size: .13rem; */
   padding-top: 10px;
     padding-left: 15px;
 }
@@ -258,7 +258,7 @@ body{
   text-align: center;
 }
 .rule4 .rule4_text{
-  font-size: .2rem;
+  /* font-size: .2rem; */
     padding-top: 7px;
     padding-left: 6px;
 }
