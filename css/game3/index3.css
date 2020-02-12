@@ -212,9 +212,9 @@ body{
   background: url(../../img/game3/kuang1.png) no-repeat;
   position: absolute;
   top: 4.87rem;
-  /* right: -0.4rem;    */
   left: -.6rem;
   background-size: 100% 100%;
+  
 }
 
 .rule2_text{  
