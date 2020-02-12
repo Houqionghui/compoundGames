@@ -237,7 +237,7 @@ body{
     /* width: 1.83rem;
     height: 1.06rem; */
      width:1.7rem;
-     height:1.59rem;
+     height:1.7rem;
     background: url(../../img/game3/kuang2.png) no-repeat;
     position: absolute;
     top: 1.83rem;
@@ -250,7 +250,7 @@ body{
   /* width: 62px;
   padding-top: 10px;
     padding-left: 15px; */
-    width: 70%;
+    width: 90%;
     padding-top: .2rem;
     padding-left: .1rem;
 }
