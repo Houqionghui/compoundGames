@@ -207,13 +207,21 @@ body{
 }
 
 .rule2{
-  width: 1.83rem;
+  /* width: 1.83rem;
   height: 1.02rem;
   background: url(../../img/game3/kuang1.png) no-repeat;
   position: absolute;
   top: 4.87rem;
   left: -.6rem;
-  background-size: 100% 100%;
+  background-size: 100% 100%; */
+    width: 1.83rem;
+    height: 1.06rem;
+    background: url(../../img/game3/kuang1.png) no-repeat;
+    position: absolute;
+    top: 4.87rem;
+    left: -.6rem;
+    background-size: 100% 100%;
+    text-align: center;
   
 }
 
@@ -244,7 +252,7 @@ body{
     padding-left: 15px; */
     width: 70%;
     padding-top: .2rem;
-    padding-left: .2rem;
+    padding-left: .1rem;
 }
 .rule4{
   /* width:1.57rem;
@@ -264,7 +272,7 @@ body{
     /* padding-top: 7px;
     padding-left: 6px; */
      padding-top: .1rem;
-    padding-left: .1rem;
+    /* padding-left: .1rem; */
 }
  #input1{
   width:  0.38rem;
