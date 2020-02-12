@@ -239,10 +239,12 @@ body{
   
 }
 .rule3_text{
-  width: 62px;
-  /* font-size: .13rem; */
+  /* width: 62px;
   padding-top: 10px;
-    padding-left: 15px;
+    padding-left: 15px; */
+    width: 70%;
+    padding-top: .2rem;
+    padding-left: .3rem;
 }
 .rule4{
   /* width:1.57rem;
