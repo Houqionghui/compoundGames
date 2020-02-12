@@ -214,14 +214,14 @@ body{
   top: 4.87rem;
   left: -.6rem;
   background-size: 100% 100%; */
-    width: 1.83rem;
+    width: 1.84rem;
     height: 1.06rem;
     background: url(../../img/game3/kuang1.png) no-repeat;
     position: absolute;
     top: 4.87rem;
     left: -.6rem;
     background-size: 100% 100%;
-    text-align: center;
+    /* text-align: center; */
   
 }
 
@@ -230,7 +230,7 @@ body{
   /* margin: 0 auto; */
   /* font-size: .2rem; */
   padding-top: .12rem;
-  padding-left: 0.1rem;
+  /* padding-left: 0.1rem; */
 }
 
 .rule3{
@@ -257,7 +257,7 @@ body{
 .rule4{
   /* width:1.57rem;
   height:1.59rem; */
-  width: 1.83rem;
+  width: 1.84rem;
   height: 1.06rem;
   background: url(../../img/game3/kuang1.png) no-repeat;
   position: absolute;
