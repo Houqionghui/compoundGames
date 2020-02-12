@@ -244,7 +244,7 @@ body{
     padding-left: 15px; */
     width: 70%;
     padding-top: .2rem;
-    padding-left: .3rem;
+    padding-left: .2rem;
 }
 .rule4{
   /* width:1.57rem;
@@ -261,8 +261,10 @@ body{
 }
 .rule4 .rule4_text{
   /* font-size: .2rem; */
-    padding-top: 7px;
-    padding-left: 6px;
+    /* padding-top: 7px;
+    padding-left: 6px; */
+     padding-top: .1rem;
+    padding-left: .1rem;
 }
  #input1{
   width:  0.38rem;
