@@ -1,7 +1,7 @@
 let trafficBox = document.getElementsByClassName('trafficBox')[0];
 let btn = document.getElementById('btn');
-let customs = 5;
-let number=1;
+let customs = 30; //要经过的30个红绿灯
+let topic=1;//第几个空滤的
 let imgs = ['./img/game4/sjbj1.png', './img/game4/sjbj2.png', './img/game4/sjbj3.png', './img/game4/sjbj4.png'];
 let i = 0;
 trafficBox.style.background = "#adc4f8 url(./img/game4/sjbj1.png) bottom center";   //设置图片的初始图片为该路径的图片
@@ -15,13 +15,10 @@ function time() {
   randomItem = imgs[Math.floor(Math.random() * imgs.length)];
    console.log(randomItem);
   if(randomItem=='./img/game4/sjbj1.png'){
-    // alert('1')
     trafficBox.style.background = " #adc4f8 url(" + randomItem + ") no-repeat bottom center";
   }else if(randomItem=='./img/game4/sjbj2.png'){
-    // alert('2')
     trafficBox.style.background = " #b7bfb1 url(" + randomItem + ") no-repeat bottom center";
   }else if(randomItem=='./img/game4/sjbj3.png'){
-    // alert('3')
     trafficBox.style.background = " #dec6c0 url(" + randomItem + ") no-repeat bottom center";
   }else if(randomItem=='./img/game4/sjbj4.png'){
     trafficBox.style.background = " #c9dde9 url(" + randomItem + ") no-repeat bottom center";
@@ -42,8 +39,8 @@ let trafficStyle = '';
 function clickEvent() {
   btn.addEventListener('click', function () {
     customs--;
-    number++;
-    red.innerText=number;
+    topic++;
+    red.innerText=topic;
     console.log(customs);
     if (customs <= 0) {
       setTimeout(function () {
@@ -90,24 +87,59 @@ function setColora(color) {
 function setColorb(color) {
   circleGreen.style.backgroundColor = color;//绿灯
 }
+let arr=[];
+let sliceArr=[];
 function startWork() {
   let radio = document.getElementsByName("DoorCt");
+  let list=document.getElementsByClassName('list')[0];
+  let history=list.getElementsByTagName('li');
   for (let i = 0; i < radio.length; i++) {
     radio[i].onclick=function(){
       let number = Math.floor((Math.random() * 2) + 1);
       if (number == 1) {
+        arr.push('red');
+        console.log(arr);
+        
         setTimeout(() => {
-          setColora("red");
+          setColora("red");        
           circleGreen.style.backgroundColor = '#cccccc';
         }, 1000)
       } else if (number == 2) {
+        arr.push('green');
+        console.log(arr);       
         setTimeout(() => {
           setColorb("green");
           circleRed.style.backgroundColor = '#cccccc';
         }, 1000)
       }
+
+      // 两个变量 一个选题 一个选元素 每次重新生成选题索引的时候 选题变量就+1
+      for (let i = 0; i < arr.length; i++) {
+        let a=topic-1;
+        for (let i = 0; i < history.length; i++) {   
+          if(a>=9){
+            sliceArr = arr.slice(-10);
+            console.log(sliceArr);
+            setTimeout(function(){
+              history[i].style.background=sliceArr[i];     
+            },2000)
+            
+          }else{
+            setTimeout(function(){
+              history[a].style.background=arr[a];     
+            },2000)
+           
+          }
+          // console.log(history[a]);          
+          
+          
+        }
+    
+    }
+    
       getValue(number);
     }
+   
   }
 }
 startWork()

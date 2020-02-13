@@ -194,10 +194,9 @@ width: 0.95rem;
     height: 3rem;
     margin: 0 auto;
     background: rgb(253, 252, 252);
-  font-size: 18px;
-  margin-top: 3rem;
-  border-radius: 15px;
-
+    font-size: 18px;
+    margin-top: 3rem;
+    border-radius: 15px;
 }
 .defeated{
   line-height: 3rem;
@@ -209,13 +208,56 @@ width: 0.95rem;
   margin: 0 auto;
 }
 .options input{
-  margin-bottom: .3rem;
+  vertical-align: middle;
 }
+.options .red{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: red;
+  vertical-align: middle;
+}
+.options .green{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: green;
+  vertical-align: middle;
+}
+
 .acquisition{
   width: 80%;
   margin: 0 auto;
   padding-top: 1rem;
 }
+/* 红绿灯历史记录 */
+.record{
+  width: 5.5rem;
+  height: .5rem;
+  margin: 0 auto;
+  
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+.record .list{
+  width: 5rem;
+  margin: 0 auto ;
+  padding-top: .05rem;
+
+}
+.record .list li{
+  width: .4rem;
+  height: .4rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #cccccc;
+  float: left;
+  margin-right: .1rem;
+}
+
+
 /*最后页 */
 #guess{
   width: 100%;

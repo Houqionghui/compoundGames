@@ -18,11 +18,27 @@
   </div>
 <!-- 红绿灯 -->
     <div class="trafficBox">
+      <!-- 前10个红绿灯-->
+      <div class="record">
+        <ul class="list clearfix">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       <div class="trafficBox_title">
         <div id="topic">前方即将到达第<span id="red">1</span>个交通灯，请您猜测您会遇到红灯还是绿灯？</div>
         <div class="options">
-          <input type="radio" name="DoorCt" value="1">A.红灯<br>
-          <input type="radio" name="DoorCt" value="2">B.绿灯
+          <input type="radio" name="DoorCt" value="1">A.<span class="red"></span><br>
+          <br>
+          <input type="radio" name="DoorCt" value="2">B.<span class="green"></span>
         </div>
         <!-- <div id="button">确定</div> -->
       </div>

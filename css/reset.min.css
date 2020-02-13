@@ -163,12 +163,10 @@ button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focus
     color: inherit;
     opacity: .54
 }
-
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
     font: inherit
 }
-
 .clearfix:after {
     display: block;
     height: 0;
