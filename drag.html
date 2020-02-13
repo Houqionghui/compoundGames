@@ -118,22 +118,21 @@
             onMoveIn: function (e) {
                 e.style.cssText = "opacity: 1;"
                 // console.log('我已进入目标区域');
-                diningB.style.display='block';
-              
-               
+                diningB.style.display='block';   
+                setTimeout(function(){
+                    diningB.style.display='none'
+                },1000)                       
             },
             onEnd: function (e) {
                 num--;
             //    console.log(box);
-               diningB.style.display='none';   
-              
+               diningB.style.display='none';                 
                 box.style.opacity = '.8'; 
-                e.innerHTML = "我已移入A区域";
+                // e.innerHTML = "我已移入A区域";
                 // console.log('我已移入A区域');                       
                 arrA.push(e.id);              
                 empty();
-                // e.style.cssText += "display: none;"
-               
+                // e.style.cssText += "display: none;"              
                 e.remove();
             },
         });
@@ -150,6 +149,10 @@
             onMoveIn: function (e) {
                 e.style.cssText = "opacity: 1;";
                 diningA.style.display='block';
+                setTimeout(function(){
+                    diningA.style.display='none'
+                },1000)    
+
             },
             onEnd: function (e) {
                 num--;
