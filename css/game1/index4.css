@@ -70,8 +70,12 @@ body{
   height: 2.1rem;
   margin: 0 auto;
 }
-
-
+.diningB{
+  font-size: 18px;
+  margin-left: 30px;
+  color: #ffffff;
+  display: none;
+}
 .box1 {
   width: 4.3rem;
   height:3.79rem ;
@@ -82,6 +86,12 @@ body{
   top: -0.63rem;
   right:-3.4rem;
   opacity: .8;
+}
+.diningA{
+  font-size: 18px;
+  margin-left: .6rem;
+  display: none;
+  color: #ffffff;
 }
 .drag p{
   width:1.2rem;

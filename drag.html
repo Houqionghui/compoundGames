@@ -19,11 +19,14 @@
         <div class="content">
             <div class="left">
                 <!-- A餐厅 -->
-                <div class="box"></div>
+                <div class="box">
+                    <div class="diningB">移入B餐厅</div>
+                </div>
                 <!-- B餐厅 -->
-                <div class="box1"></div>
+                <div class="box1">
+                    <div class="diningA">移入A餐厅</div>
+                </div>
             </div>
-
         </div>
         <!-- 萝卜 -->
         <div class="list">
@@ -66,9 +69,9 @@
             e.preventDefault();
         });
         let box=document.querySelector('.box');
-        let box1=document.querySelector('.box1')
-        console.log(box);
-        
+        let box1=document.querySelector('.box1');
+        let diningB=document.querySelector('.diningB');
+        let diningA=document.querySelector('.diningA');
         
         let data = [
             { "id": 1, "text": [10, 90] },
@@ -87,7 +90,7 @@
             for (let i = 0; i < data.length; i++) {
                 str += `
                 <div class="drag" id="${data[i].id}">
-                    <img src="" alt="">
+                    <img src="" alt="">                   
                     <p style="pointer-events: none;">普通${data[i].text[0]}%<br>团体${data[i].text[1]}%</p>
                     </div>
                 `;
@@ -110,13 +113,15 @@
             onMoveIn: function (e) {
                 e.style.cssText = "opacity: 1;"
                 console.log('我已进入目标区域');
+                diningB.style.display='block';
+              
                
             },
             onEnd: function (e) {
                 num--;
-                // console.log(e);    
                console.log(box);
-                          
+               diningB.style.display='none';   
+              
                 box.style.opacity = '.8'; 
                 e.innerHTML = "我已移入A区域";
                 console.log('我已移入A区域');                       
@@ -138,11 +143,13 @@
                 // console.log('move');
             },
             onMoveIn: function (e) {
-                e.style.cssText = "opacity: 1;"
+                e.style.cssText = "opacity: 1;";
+                diningA.style.display='block';
             },
             onEnd: function (e) {
                 num--;
                 arrB.push(e.id);
+                diningA.style.display='none';       
                 empty();
                 console.log('我已移入B区域');
                 box1.style.opacity='0.8'
