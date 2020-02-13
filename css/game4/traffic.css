@@ -197,6 +197,7 @@ width: 0.95rem;
     font-size: 18px;
     margin-top: 3rem;
     border-radius: 15px;
+    z-index: 1;
 }
 .defeated{
   line-height: 3rem;
@@ -240,7 +241,6 @@ width: 0.95rem;
   width: 5.5rem;
   height: .5rem;
   margin: 0 auto;
-  
   border-radius: 15px;
   background: rgb(253, 252, 252);
 }
