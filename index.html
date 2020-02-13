@@ -34,23 +34,33 @@
       <i></i>
      
     </div>
+    <div class="beginPage">开始游戏</div>
   </div>
   <div class="homePage2">
+    <div class="next">
+      <img src="./img/game1/长箭头.png" alt="">
+      <div class="nextStep">下一步</div>
+    </div>
   </div>
   <script src="./js/game1/jquery-1.10.2.js"></script>
   <script> 
-  let homePage=document.getElementsByClassName('homePage')[0];
-  let homePage2=document.getElementsByClassName('homePage2')[0];
-  homePage.onclick=function(){
+  let beginPage=document.getElementsByClassName('beginPage')[0];
+  let next=document.getElementsByClassName('next')[0];
+  beginPage.onclick=function(){
   $(".banner .begin").css('box-shadow', 'none')
   setTimeout(function () {
     $('.homePage').fadeOut(500)
     $('.homePage2').fadeIn(500)
+    $('.next').addClass('animated fadeInRight');
+    setTimeout(function(){
+        $('.next').removeClass('fadeInRight');
+    }, 1000);
   }, 50)
   }
-  homePage2.onclick=function(){
+  next.onclick=function(){
     window.location.href='drag.html'
   }
+
   </script>
   <script>
       $(function(){
@@ -63,6 +73,7 @@
     setTimeout(function(){
         $('.imgright').removeClass('fadeInRight');
     }, 1000);
+   
 });
 
   </script>

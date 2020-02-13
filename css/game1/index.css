@@ -21,7 +21,19 @@ html{
   font-size: 20px;
   z-index: 2;
 }
-
+.homePage2 .next{
+  position: absolute;
+  bottom: .2rem;
+  right: .2rem;
+}
+.homePage2 .next img{
+  width: 1rem;
+  height: 1rem;
+}
+.nextStep{
+  font-size: 12px;
+  margin-top: -.4rem;
+}
 .imgBox .imgleft{
   width: 1.59rem;
   height: 0.93rem;
@@ -84,3 +96,16 @@ html{
 
 
   
+   .beginPage{
+     width: 70px;
+     height: 30px;
+     background-color: #99a6d1;
+     font-size: 16px;
+     color: #ffffff;
+     line-height: 30px;
+     border-radius: 5px;
+     position: absolute;
+     bottom: .2rem;
+     right: .2rem;
+     text-align: center;
+   }
