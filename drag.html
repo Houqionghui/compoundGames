@@ -28,6 +28,11 @@
                 </div>
             </div>
         </div>
+
+         <div class="listImg">
+            <div  class="listImg_text">把我拖到<br><span>A</span>或者<span>B</span>餐厅吧</div>
+         </div>
+
         <!-- 萝卜 -->
         <div class="list">
 
@@ -112,19 +117,19 @@
             },
             onMoveIn: function (e) {
                 e.style.cssText = "opacity: 1;"
-                console.log('我已进入目标区域');
+                // console.log('我已进入目标区域');
                 diningB.style.display='block';
               
                
             },
             onEnd: function (e) {
                 num--;
-               console.log(box);
+            //    console.log(box);
                diningB.style.display='none';   
               
                 box.style.opacity = '.8'; 
                 e.innerHTML = "我已移入A区域";
-                console.log('我已移入A区域');                       
+                // console.log('我已移入A区域');                       
                 arrA.push(e.id);              
                 empty();
                 // e.style.cssText += "display: none;"
@@ -151,7 +156,7 @@
                 arrB.push(e.id);
                 diningA.style.display='none';       
                 empty();
-                console.log('我已移入B区域');
+                // console.log('我已移入B区域');
                 box1.style.opacity='0.8'
                 e.innerHTML = "我已移入B区域";
 
